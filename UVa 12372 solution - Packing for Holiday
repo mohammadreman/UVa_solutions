@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main(){
+    int T, c=1,L,W,H;
+    scanf("%d",&T);
+    while (T--)
+    {
+        scanf("%d%d%d",&L,&W,&H);
+        if (L>20 || W>20 || H>20)
+            printf("Case %d: bad\n",c++);
+        else
+            printf("Case %d: good\n",c++);
+    }
+    return 0;
+}
