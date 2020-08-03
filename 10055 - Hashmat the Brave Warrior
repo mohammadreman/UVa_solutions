@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+long input_1, input_2, x, y, output;
+while(scanf(“%ld%ld”,&input_1,&input_2)==2)
+ {
+if(input_1 >= input_2)
+   {
+x=input_2;
+y=input_1;
+   }
+else
+   {
+x=input_1;
+y=input_2;
+   }
+output=y-x;
+printf(“%ld\n”,output);
+ } 
+} 
