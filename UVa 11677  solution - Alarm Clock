@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main()
+{
+int H,H1,H2,M,M1,M2;
+while(scanf("%d%d%d%d",&H1,&M1,&H2,&H2)==4)
+ {
+    if(H1==0 && M1==0 && H2==0 && M2==0)
+    break;
+    if(H1==0)
+    H1=24;
+    if(H2==0)
+    H2=24;
+    if(H1==H2 && M1>M2)
+      {
+      M=1440+(60-M1)-(60-M2);
+      }
+      else if(H1==H2 && M1<M2)
+      {
+      M=M2-M1;
+      }
+      else if(H1>H2)
+      {
+      H=24-(H1-H2);
+      M=(H*60)+(60-M1)-(60-M2);
+      }
+      else
+        {
+        H=H2-H1;
+        M=(H*60)-(60-M2)+(60-M1);
+        }
+
+printf("%d\n",M);
+ }
+return 0;
+}
