@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+int main()
+{
+    char x[10001];
+    int i,j,k,l,len,n,T; 
+    while(scanf("%ld\n",&T)!=EOF)
+    {
+     for(i=1;i<=T;++i)
+       {
+        gets(x);
+        len=strlen(x);
+        j=sqrt(len);
+        if(j*j==len)
+          {
+           for(k=0;k<j;++k)
+              {
+               l=0;
+               for(n=0;n<j;++n,l+=j)
+                  {
+                   printf("%c",x[k+l]);
+                  }
+              }
+               printf("\n");
+           }
+            else
+                printf("INVALID\n");
+       }
+    }
+  return 0;
+}
